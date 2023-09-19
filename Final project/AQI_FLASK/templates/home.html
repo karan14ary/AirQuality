@@ -1,0 +1,184 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Air Quality Prediction</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      
+      #acc{
+        color: blue;
+      }
+      #acc:hover{
+        color: brown;
+      }
+    </style>
+  </head>
+  <body style="background-image: url('static/bag.jpg'); background-size: 100% 100vh; background-repeat:no-repeat;" >
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    
+    <main role="main">
+
+      <section class="jumbotron p-3 p-md-5 text-white rounded bg-dark text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Air Quality Prediciton</h1>
+          <p class="lead">Air Pollution is one of the most
+critical health problems due to its increasing prevalence. In this
+paper, we aim to test the ability of machine learning algorithms
+for the prediction of Air Quality Prediciton using the smallest
+subset of features</p>
+          <!-- <p>
+            <a href="https://www.mayoclinic.org/diseases-conditions/chronic-kidney-disease/symptoms-causes/syc-20354521" class="btn btn-primary my-2">Read More about the Disease</a>
+          </p> -->
+        </div>
+      </section>
+
+      <div class="container">
+
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Machine Learning</strong>
+              <h3 class="mb-0">
+                <a class="text-dark">XGBoost Algorithm</a>
+              </h3>
+              <div class="mb-1 text-muted">For  Classification</div>
+              <a id="acc" data-toggle="modal" data-target="#myModal">Click here to check accuracy</a>
+              <p class="card-text mb-auto">XGBoost Algorithm... The general idea of the bagging method is that a combination of learning models increases the overall result. Put simply: random forest builds multiple decision trees and merges them together to get a more accurate and stable prediction.</p>
+              <!-- <a href="#">Continue reading</a> -->
+            </div>
+          </div>
+        </div>
+       </div>
+       </div>
+       <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Accuracy and loss graph for XGBoost Algorithm</h4>
+      </div>
+      <div class="modal-body">
+        <img src="http://127.0.0.1:5000/static/acc.png" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      </div>
+    </div>
+
+
+      <div class="container marketing">
+
+        
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://cdn.icon-icons.com/icons2/2593/PNG/512/data_icon_154512.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Data-Set</h2>
+            <p>We have used the data set available in Kaggle - Air Quality Prediciton. After Classifying the data, Preprocessin and performed the Exploratory Data Analysis. This data set contains about 26000 records of data in various categories.</p>
+            <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="data:image/png;base64,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" alt="Generic placeholder image" width="140" height="140">
+            <h2>Algorithm</h2>
+            <p>XGBoost Algorithm is a popular machine learning algorithm that belongs to the supervised learning technique. It can be used for both Classification and Regression problems in ML. It is based on the concept of ensemble learning to improve the performance of the model.</p>
+            <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://cdn.pixabay.com/photo/2016/05/25/13/18/target-1414775_960_720.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Accuracy</h2>
+            <p>XGBoost is a decision-tree-based ensemble Machine Learning algorithm that uses a gradient boosting framework. In prediction problems involving unstructured data. After modelling our data, the Accuracy is <b>82%.</b> So far we achieved a Good accuracy. </p>
+            <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-12">
+            <h2 class="featurette-heading">How will it work???</h2>
+            <p class="lead">This prediction will be used in healthcare Applications. As it was very important to predict weather the patient was having any chances of getting this Air Quality . This project comprises with the deployement too. We can deploy this project y means of Python web servers available in the market.</p>
+          </div>
+        </div>
+
+        <!-- <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-12">
+            <h2 class="featurette-heading">Conflicts & Modifications</h2>
+            <p class="lead">Since, we deployed our model in Flask - Framework. As, this was a simple classification and regression analysis. There might be some problems arises during the installationof Tensorflow & Python Versions. we must make sure of Installing the same versions. In order to avoid this, We must ensure to install the correct dependencies - before running this project.</p>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-12">
+            <h2 class="featurette-heading">Future implementations</h2>
+            <p class="lead">Django - Frameowrk will be more suitable for the deployement at any case. At the same, adding the feature - Upload image and process the X-Ray image and predict for any chances of getting the disease.</p>
+          </div>
+        </div>
+
+        <hr class="featurette-divider"> -->
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+      <br><br>
+      <section class="jumbotron p-3 p-md-5 text-white rounded bg-dark text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Air Quality Prediction</h1>
+          <p class="lead">Air Pollution is one of the most
+critical health problems due to its increasing prevalence. In this
+paper, we aim to test the ability of machine learning algorithms
+for the prediction of Air Quality Predicitone using the smallest
+subset of features</p>
+          <!-- <p>
+            <a href="{{ url_for('fetalPage') }}" class="btn btn-primary my-2">Check out the Project</a>
+          </p> -->
+        </div>
+      </section>
+
+      
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
+
+{% endblock %}

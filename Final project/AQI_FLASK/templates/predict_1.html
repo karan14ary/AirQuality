@@ -1,0 +1,54 @@
+{% extends 'main2.html' %}
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% if pred == 2  %}
+                <div class="jumbotron ">
+  <h1 class="display-4">  Status of the Fetal is Suspectful !!!</h1>
+  <p class="lead">Please Consult the Doctor . It was too risky without consultation. Make sure of health .</p>
+  <hr class="my-4">
+  <p>Proper Doctor Consultation Needed.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://www.who.int/" role="button">Learn more</a>
+  </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/suspect" role="button">Remedies</a>
+  </p>
+
+</div>
+<div class="col-md-6">
+  {% elif pred == 3  %}
+      <div class="jumbotron ">
+<h1 class="display-4">Status of the Fetal is Pathological !!!!</h1>
+<p class="lead">Please Consult the Doctor Immideately. It was too risky without consultation. Make sure of health.</p>
+<hr class="my-4">
+<p>Proper Doctor Consultation Needed.</p>
+<p class="lead">
+<a class="btn btn-primary btn-lg" href="https://www.who.int/" role="button">Learn more</a>
+</p>
+<p class="lead">
+  <a class="btn btn-primary btn-lg" href="/pathological" role="button">Check diet</a>
+  </p>
+
+</div>
+  {% else %}
+                <div class="jumbotron">
+  <h1 class="display-4">Great!  , Fetal is Healthy</h1>
+  <p class="lead">You are Absolutely Alright ! There is no Marks for  Air Quality Prediciton . Enjoy your life with full of Happiness.</p>
+  <hr class="my-4">
+  <p>Be careful at your health. Nothing is important than your health.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://www.who.int/" target="_blank" role="button">Learn more</a>
+  </p>
+</div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('fetalPage') }}" class="btn btn-block btn-primary">Recheck</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'main2.html' %}
+ {% block content %}
+
+<style>
+  .mt-0 {
+    margin-top: 50 !important;
+  }
+  html body {
+    /* background-color: rgb(206, 206, 228); */
+    background-color: rgb(104 108 115);
+  }
+</style>
+<section
+  style="
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  "
+>
+<body style="background-image: url('static/res.jpg'); background-size: 100% 100vh; background-repeat:no-repeat;">
+  <div class="container mx-auto my-50" style="margin: 5px">
+    <div class="row">
+      <div class="col-sm py-2 py-md-3">
+        <div class="" style="justify-content: center">
+          <center>
+            <!-- here’s the avatar -->
+        <a>
+          <img src="../static/aqi.png" />
+        </a>
+
+        <!-- the username -->
+        <h1 style="
+        font-weight: bolder;
+        text-transform: capitalize;
+        color: #cfc547;
+        font-size: 49px;
+        text-shadow: 10px 10px 25px rgb(81, 67, 21),
+          -10px 10px 25px rgb(81, 67, 21),
+          -10px -10px 25px rgb(81, 67, 21),
+          10px -10px 25px rgb(81, 67, 21);
+      ">Air Quality Index Value:<br> {{ prediction }}</h1>
+        <h1 style="
+        font-weight: bolder;
+        text-transform: capitalize;
+        color: #cfc547;
+        font-size: 49px;
+        text-shadow: 10px 10px 25px rgb(81, 67, 21),
+          -10px 10px 25px rgb(81, 67, 21),
+          -10px -10px 25px rgb(81, 67, 21),
+          10px -10px 25px rgb(81, 67, 21);
+      ">Air Quality Status is:<br> {{ bucket }}</h1>
+       
+
+      <h1 style="
+      font-weight: bolder;
+      text-transform: capitalize;
+      color: #cfc547;
+      font-size: 49px;
+      text-shadow: 10px 10px 25px rgb(81, 67, 21),
+        -10px 10px 25px rgb(81, 67, 21),
+        -10px -10px 25px rgb(81, 67, 21),
+        10px -10px 25px rgb(81, 67, 21);
+    ">Location is : <div class="row">
+Latitude: 
+<input style="border: 1px solid transparent ;background:transparent ;width: 250px;" value="{{lat}}" type="number" name="Latitude" placeholder="Latitude" >
+,Longitude: 
+<input style="border: 1px solid transparent ;background:transparent ;width: 250px;" value="{{lng}}" type="number" name="Longitude" placeholder="Longitude" >
+    </div>
+   {{ locc }}</h1>
+  </center>
+        
+        <!-- and role or location -->
+          <div class="uderline1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+{% endblock %}

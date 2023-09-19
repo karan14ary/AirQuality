@@ -1,0 +1,124 @@
+{% extends 'main2.html' %}
+{% block content %}
+<body style="background-image: url('static/air.jpeg'); background-size: 100% 100vh; background-repeat:no-repeat;">
+<div class="row"  style="margin-bottom: 50px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <center><h1>Air Quality Prediction</h1></center> <br>
+        <div class="card card-body" style="border: 1px solid black;">
+            <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Particulate Matter(2.5)</label>
+                            <input style="border: 1px solid black;" class="form-control" value="{{pmtwo}}" type="number" name="PM2.5" placeholder="PM2.5" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Particulate Matter(10)</label>
+                            <input style="border: 1px solid black;" class="form-control" value="{{pmten}}" type="number" name="PM10" placeholder="PM10" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Carbondioxide(Co2)</label>
+                            <input style="border: 1px solid black;" class="form-control" value="{{coo}}" type="number" name="CO2" placeholder="CO2" required step="any">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Nitrogendioxide(No2)</label>
+                            <input style="border: 1px solid black;" class="form-control"  type="number" name="NO2" placeholder="NO2" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>oxide of nitrogen(NOx)</label>
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="NOx" placeholder="NOx" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Ammonia(NH3)</label>
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="NH3" placeholder="NH3" required step="any">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Carbonmonoxide(CO)</label>
+                            <input style="border: 1px solid black;" class="form-control" value="{{co}}" type="number" name="CO" placeholder="CO" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Sulphurdioxide(SO2)</label>
+                            <input style="border: 1px solid black;" class="form-control" value="{{soo}}" type="number" name="SO2" placeholder="SO2" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Ozone(O3)</label>
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="O3" placeholder="O3" required step="any">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Benzene</label>
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Benzene" placeholder="Benzene" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Toluene</label>
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Toluene" placeholder="Toluene" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Xylene</label>
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Xylene" placeholder="Xylene" required step="any">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Temperature</label>
+                            <input style="border: 1px solid black;" class="form-control" value="{{temp}}" type="number" name="temp" placeholder="Temp" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Humidity</label>
+                            <input style="border: 1px solid black;" class="form-control" value="{{hum}}" type="number" name="hum" placeholder="hum" required step="any">
+                        </div>
+                    </div>
+                    
+                
+                <input type="submit" class="btn btn-info btn-block" value="Predict" required step="any">
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div> 
+<div class="container">
+
+<h1 style="text-align: center"> Sample-Inputs in the Data Set</h1> <br>
+
+
+
+
+</div>
+</body>
+{% endblock %}
